@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
-$DATABASE_URL=parse(url:'DATABASE_URL');
+  $DATABASE_URL=parse_url('postgres://csyjlilkugvvkm:d7b9e7422af991accefafba37e53fff3608a3f8d924af133a8947587637baa95@ec2-52-201-195-11.compute-1.amazonaws.com:5432/dda9jfnfom6f8u');
 
 return [
 
@@ -15,8 +15,8 @@ return [
     | you may use many connections at once using the Database library.
     |
     */
-    'default' => 'pgsql',
-    //'default' => env('DB_CONNECTION', 'pgsql'),
+    //'default' => 'pgsql',
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,7 +66,6 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'url' => env('DATABASE_URL'),
             'host' => $DATABASE_URL["host"],
             'port' => $DATABASE_URL["port"],
             'database' => ltrim($DATABASE_URL["path"], "/"),
