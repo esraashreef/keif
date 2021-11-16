@@ -42,8 +42,8 @@
                           @if($answer->answeredby(auth()->user()))
                              <a href="/answer/{{$answer->id}}/edit"  class="btn btn-outline-success btn-sm text-xs">edit</a>
                             <form action="/answer/{{$answer->id}}" method="POST" class="d-inline">
-                            @csrf
-                            @method('DELETE')
+                             @csrf
+                             @method('DELETE')
                               <button type="submit" class="btn btn-outline-danger btn-sm text-xs"> Delete</button>
                             </form>
                             @endif

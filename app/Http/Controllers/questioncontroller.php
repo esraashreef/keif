@@ -68,6 +68,7 @@ class questioncontroller extends Controller
 
         return redirect('/dashboard');
     }
+    
     public function search( request $request){
 
   
