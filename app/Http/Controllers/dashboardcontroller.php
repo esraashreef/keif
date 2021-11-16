@@ -11,7 +11,7 @@ class dashboardcontroller extends Controller
     {   
         
         if (Auth::check()) {
-            $questions = questions::where('user_id','=',Auth::user()->id)->paginate(15);
+            $questions = questions::where('user_id','=',Auth::user()->id)->orderBy('created_at', 'desc')->paginate(15);
             return view('dashboard', [
                 'questions' => $questions,
                 
