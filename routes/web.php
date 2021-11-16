@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\questioncontroller ;
 use App\Http\Controllers\auth\Registercontroller ;
-use app\Http\Controllers\auth\logincontroller;
+use App\Http\Controllers\auth\logincontroller;
 use App\Http\Controllers\dashboardcontroller ;
 use App\Http\Controllers\auth\logoutcontroller ;
 use App\Http\Controllers\showcontroller ;
