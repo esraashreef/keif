@@ -29,7 +29,7 @@ class questions extends Model
 
     public function answers()
     {
-        return $this->hasMany(answer::class); 
+        return $this->hasMany(Answer::class); 
     }
 }
 
